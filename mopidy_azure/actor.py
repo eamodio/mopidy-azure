@@ -24,6 +24,7 @@ class SharedAccessKey:
 
 
 class AzureBackend(pykka.ThreadingActor, backend.Backend):
+    # todo: #9 test again
     @property
     def account_name(self) -> str:
         return str(self._config["azure"]["account_name"])
